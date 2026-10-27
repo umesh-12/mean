@@ -10,8 +10,10 @@ export function errorHandler(err, req, res, next) {
     const messages = Object.values(err.errors).map((e) => e.message);
     return res.status(400).json({ error: messages.join(", ") });
   }
+  // duplicate (unique) error: kun field duplicate bhayo tyo anusar message
   if (err.code === 11000) {
-    return res.status(409).json({ error: "Product name already exists" });
+    const field = Object.keys(err.keyPattern || {})[0] || "value";
+    return res.status(409).json({ error: `${field} already exists` });
   }
   console.error(err);
   res.status(500).json({ error: "Something went wrong" });
