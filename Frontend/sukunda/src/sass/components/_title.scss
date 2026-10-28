@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as vars;
+
+
+
+.sub-title{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: vars.$secondary-500;
+}

@@ -1,0 +1,117 @@
+@use "../abstracts/variables" as vars;
+
+.product-card {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 4px;
+  padding: 20px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-img-holder {
+  height: 230px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  img{
+    height: 200px;
+  }
+}
+
+.product-content {
+  margin-top: 1rem;
+}
+
+.product-title {
+  font-weight: bold;
+  font-size: 15px;
+  color: vars.$grey-500;
+}
+
+.product-price {
+  display: inline-flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.product-price-main {
+  font-size: 16px;
+  font-weight: bold;
+  color: vars.$primary-500;
+}
+
+.product-price-strike {
+  text-decoration: line-through;
+}
+
+/*cart*/
+
+.product-card:hover .product-action li {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-action {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+  list-style: none;
+}
+
+.product-action li {
+  -webkit-transform: translateY(8px);
+  -ms-transform: translateY(8px);
+  transform: translateY(8px);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.product-action li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.product-action li:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.product-action li:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.product-action li a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid vars.$border;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #949392;
+}
+
+.product-action li a:hover {
+  color: #fff;
+  background-color: vars.$primary-500;
+  border-color: vars.$primary-500;
+}

@@ -1,0 +1,86 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.dev/guide/theming
+
+@use "ngx-red-zoom/styles/base.scss";
+@use "ngx-red-zoom/styles/style-window.scss";
+
+@use "@angular/material" as mat;
+
+@use "bootstrap/scss/bootstrap";
+
+@use "abstracts/functions";
+@use "abstracts/mixins";
+
+@use "abstracts/variables";
+
+@use "base/global";
+@use "base/base-1";
+@use "base/animations";
+@use "base/typography";
+@use "base/utilities";
+
+@use "components/banner-grid";
+@use "components/feature-strip";
+@use "components/category";
+@use "components/about";
+@use "components/benefit-section";
+
+@use "components/heading";
+@use "components/popup";
+@use "components/component-card";
+@use "components/component-price";
+@use "components/breadcrum";
+@use "components/toastr";
+@use "components/button";
+@use "components/title";
+@use "components/products-tab";
+@use "components/product-media";
+@use "components/testimonials";
+@use "components/pagination";
+@use "components/header-sign";
+@use "components/component-min-cart";
+@use "components/cart-sidebar";
+@use "components/product-grid-1";
+@use "components/component-rating";
+@use "components/product-grid-5";
+@use "components/AI-chat";
+
+@use "layout/header";
+@use "layout/header-3";
+@use "layout/menu";
+@use "layout/block-menu";
+
+@use "layout/loader";
+@use "layout/banner-singer";
+@use "layout/slide-show";
+@use "layout/footer-2";
+@use "layout/logo-carousel";
+@use "layout/space";
+@use "layout/product-banner";
+@use "layout/banner-carousel";
+@use "layout/footer";
+
+@use "pages/home";
+
+@use "pages/login";
+@use "pages/shop";
+@use "pages/confirmation";
+@use "pages/about-page";
+@use "pages/shop-single";
+@use "pages/error-page";
+@use "pages/checkout";
+@use "pages/form";
+@use "pages/contact";
+@use "pages/cart";
+@use "pages/brand-logo";
+@use "pages/blog-page";
+@use "pages/blog-single-page";
+@use "pages/user-admin-pages/dashboard";
+@use "pages/user-admin-pages/edit";
+
+
+
+
+
+@use "custom";
+@use "responsive";

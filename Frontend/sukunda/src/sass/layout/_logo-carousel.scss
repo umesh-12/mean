@@ -1,0 +1,124 @@
+.logo-carousel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logo-carousel-content{
+    width: 100%;
+    margin: 0;
+}
+.logo-image{
+    margin: 0 5px;
+    position: relative;
+}
+.logo-image.slick-slide.slick-active{
+    display: flex;
+    justify-content: center;
+}
+.image-effect a img{
+    opacity: 0.4;
+    transition: all 0.5s ease-out 0s;
+}
+
+.image-effect a:hover img{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.logo-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.advanced__image{
+    margin: 0 auto;
+}
+.logo-description{
+    font-size: 16px;
+    line-height: 40px;
+    padding-top: 20px;
+}
+
+.logo_media.media{
+    background-color: transparent;
+    text-align: center;
+}
+
+/* @media(min-width: 768px){
+    .logo-carousel-content{
+        padding: 4.2rem 0;
+    }
+} */
+/* add */
+.logo-image img{
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+.logo_media{
+    border-radius: 5px;
+}
+.logo-image-hover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0 0 0 / 50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+}
+.logo-icon-hover{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+}
+.logo-image.hover-image:hover .logo-image-hover{
+    opacity: 1;
+    visibility: visible;
+}
+.hover-image .logo-icon-hover:hover{
+    background-color: var(--g-main);
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.hover-image .logo-icon-hover:hover svg path{
+    fill: currentColor;
+    color: #fff;
+}
+.logo_media a{
+    text-align: center;
+}
+/* home 1 */
+/* .logo-box{
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding:30px 20px;
+} */
+/* .logo-carousel .section-header{
+    background-color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    transform: translate(30px, 10px);
+    padding: 0px 25px;
+} */
+.logo-content.style-2{
+    /* home 4 */
+    padding: 30px;
+    background: #fff;
+    border: 1px dashed #e5e5e5;
+    display: block !important;
+}

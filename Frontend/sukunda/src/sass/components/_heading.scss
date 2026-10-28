@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as vars;
+
+.section-title h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+.section-title p {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 30px;
+  }
+}

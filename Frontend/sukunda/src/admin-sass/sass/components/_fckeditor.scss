@@ -1,0 +1,154 @@
+/* ================================
+   CKEditor 5 Angular Styling
+================================ */
+
+.ck.ck-editor {
+    width: 100%;
+}
+
+svg.ck {
+    width: 14px;
+}
+
+.ck-toolbar__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.ck-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ck-list {
+    display: flex;
+}
+
+.ck-button {
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    background: #f8f9fa !important;
+    color: #333 !important;
+    padding: 5px 10px !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* Toolbar */
+.ck.ck-toolbar {
+    border: 1px solid #ddd !important;
+    border-radius: 6px 6px 0 0 !important;
+    background: #f8f9fa !important;
+}
+
+
+/* Editor Area */
+.ck-editor__editable {
+    min-height: 300px !important;
+    max-height: 500px;
+    overflow-y: auto;
+
+    padding: 15px !important;
+
+    border: 1px solid #ddd !important;
+    border-top: 0 !important;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* Focus */
+.ck-editor__editable.ck-focused {
+    border-color: #86b7fe !important;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+
+/* Paragraph */
+.ck-content p {
+    margin-bottom: 10px;
+}
+
+
+/* Heading */
+.ck-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.ck-content h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/* List */
+.ck-content ul,
+.ck-content ol {
+    padding-left: 30px;
+}
+
+
+/* Table */
+.ck-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ck-content table td,
+.ck-content table th {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+
+/* Image */
+.ck-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Link */
+.ck-content a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+.admin ol li,
+.admin ul li{
+    list-style: disc inside;
+}
+
+.pro-admin ul{
+    margin-top: 20px;
+}
+
+.pro-admin h3{
+    margin-top: 10px;
+}
+
+label.ck-voice-label{
+    display: none;
+}
+
+.nutrition-section h2,
+.nutrition-section h3,
+.nutrition-section h4
+.nutrition-section h3,
+.nutrition-section ul{
+    margin-top: 20px;
+}
+
+.nutrition-section li{
+    list-style: disc inside;
+}

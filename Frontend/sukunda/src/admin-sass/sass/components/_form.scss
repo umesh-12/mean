@@ -1,0 +1,158 @@
+@use '../abstracts/variables' as vars;
+
+// Form Container
+.form {
+  border: 1px solid #ddd;
+  padding: 0.9rem 0.5rem;
+  background: #fff;
+}
+
+// Input
+.hr-input {
+  display: flex;
+  position: relative;
+
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 1rem;
+  }
+}
+
+.input-field {
+  border-radius: 4px;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 30px;
+
+  // Uncomment and ensure vars are used
+  // &:focus {
+  //   border-color: vars.$secondary-500 !important;
+  // }
+}
+
+.input-label {
+  position: absolute;
+  top: -6px;
+  left: 1rem;
+  line-height: 1;
+  z-index: 12;
+  background: #fff;
+  font-size: 0.875rem;
+  padding: 0 4px;
+}
+
+.multi-label {
+  position: absolute !important;
+  top: -52%;
+  left: 8%;
+  font-size: 0.875rem !important;
+  font-weight: 400;
+  width: fit-content !important;
+}
+
+// Required mark for input/select
+// input:required ~ label::after,
+// select:required ~ label::after,
+// ng-multiselect-dropdown[required] + label::after {
+//   content: '*';
+//   color: red;
+//   top: 50%;
+//   padding: 0 10px 0 4px;
+// }
+
+input[type='file'] {
+  font-size: 12px;
+}
+
+// Buttons
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+// Search section
+.search {
+  display: flex;
+  justify-content: flex-end;
+ // box-shadow: 0 0 -3px rgba(0, 0, 0, 0.09);
+  border: 1px solid vars.$border;
+  border-bottom: 0;
+  padding: 0.5rem;
+  background: #fff;
+
+  .form-control {
+    width: auto;
+
+    &:focus {
+      box-shadow: none;
+      border-color: vars.$primary-500;
+    }
+  }
+}
+
+.eyeIcon1 {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.5rem;
+  font-size: 1.1rem;
+  width: fit-content;
+  color: grey;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Summernote field
+.summerText {
+  position: relative;
+}
+
+.summernotes-label {
+  position: absolute;
+  top: -7%;
+  left: 8%;
+  font-size: 12px;
+}
+
+// ng-multiselect-dropdown styles
+ng-multiselect-dropdown .multiselect-dropdown {
+  .dropdown-btn {
+    padding: 3px !important;
+    height: 28px;
+
+    .selected-item {
+      max-width: 143px !important;
+      display: flex;
+      flex-wrap: nowrap;
+
+      span {
+        max-width: 108px !important;
+        text-wrap: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+
+      a {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+// Multiselect caret arrow
+.multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret {
+  width: 23px !important;
+  height: 30px !important;
+
+  &:before {
+    top: 55% !important;
+    border-width: 5px 5px 0 5px !important;
+  }
+}
+
+// Select2
+.select2 {
+  width: 100% !important;
+}

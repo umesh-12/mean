@@ -1,0 +1,158 @@
+@use "../abstracts/variables" as vars;
+
+.category {
+  text-align: center;
+
+  &-img-holder {
+    margin: 0 auto;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    border: 1px solid vars.$border;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.3s;
+  }
+
+  &-title {
+    font-weight: bold;
+    color: vars.$grey-500;
+  }
+
+  .view-eye {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 53%);
+    color: vars.$grey-500;
+    height: 24px;
+    width: 24px;
+    background: #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &:hover .view-eye {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover &-img-holder {
+    border: 1px dashed vars.$grey-500;
+  }
+}
+
+.mat-mdc-tab-body-content {
+  overflow: hidden !important;
+}
+
+.filter-card {
+  background: #fff;
+}
+
+.filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.brand-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 14px;
+  position: relative;
+  user-select: none;
+}
+
+.brand-item:last-child {
+  margin-bottom: 0;
+}
+
+.brand-item input {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cfcfcf;
+  border-radius: 6px;
+  margin-right: 12px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.brand-item input:checked + .checkmark {
+  background: vars.$secondary-500;
+  border-color: vars.$secondary-500;
+}
+
+.brand-item input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.brand-name {
+  flex: 1;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+.cat-parent .count {
+  color: var(--primary-color) !important;
+  font-size: 14px;
+}
+
+.brand-item:hover .brand-name {
+  color: vars.$primary-500;
+}
+
+@media only screen and (max-width: 992px) {
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (max-width: 576px) {
+  .advert-img {
+    img {
+      width: 110px;
+    }
+  }
+
+  .grid--6 {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+  }
+
+  .benefits .grid--4 {
+    grid-template-columns: 1fr;
+  }
+}

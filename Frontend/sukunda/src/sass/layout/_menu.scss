@@ -1,0 +1,436 @@
+/* Material Menu Styles */
+@use "@angular/material" as mat;
+@use "../abstracts/variables" as vars; // Import your variables file
+
+/*mobile menu*/
+.th-menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999999;
+  width: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.th-menu-wrapper .mobile-logo svg {
+  max-width: 185px;
+}
+
+.th-menu-wrapper .th-menu-toggle {
+  border: none;
+  font-size: 22px;
+  position: absolute;
+  right: -16.5px;
+  top: 25px;
+  padding: 0;
+  line-height: 1;
+  width: 33px;
+  height: 33px;
+  line-height: 35px;
+  font-size: 18px;
+  z-index: 1;
+  color: #fff;
+  background-color: vars.$primary-500;
+  border-radius: 50%;
+}
+
+.th-menu-wrapper .th-menu-toggle:hover {
+  background-color: vars.$primary-500;
+  color: #fff;
+}
+
+.th-menu-wrapper .th-menu-area {
+  width: 100%;
+  max-width: 310px;
+  background-color: #fff;
+  border-right: 3px solid vars.$primary-500;
+  height: 100%;
+  position: relative;
+  left: -110%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+  z-index: 1;
+}
+
+.th-menu-wrapper.th-body-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.th-menu-wrapper.th-body-visible .th-menu-area {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.th-mobile-menu {
+  overflow-y: scroll;
+  max-height: calc(100vh - 200px);
+  padding-bottom: 40px;
+  text-align: left;
+}
+
+.th-mobile-menu ul {
+  margin: 0;
+  padding: 0 0;
+}
+
+.th-mobile-menu ul li {
+  border-bottom: 1px solid #fdedf1;
+  list-style-type: none;
+}
+
+.th-mobile-menu ul li li:first-child {
+  border-top: 1px solid #fdedf1;
+}
+
+.th-mobile-menu ul li a {
+  display: block;
+  position: relative;
+  padding: 12px 0;
+  line-height: 1.4;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding-left: 18px;
+}
+
+.th-mobile-menu ul li a:before {
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 12px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.th-mobile-menu ul li.th-active > a {
+  color: vars.$primary-500;
+}
+
+.th-mobile-menu ul li.th-active > a:before {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.th-mobile-menu ul li ul li {
+  padding-left: 20px;
+}
+
+.th-mobile-menu ul li ul li:last-child {
+  border-bottom: none;
+}
+
+.th-mobile-menu ul .th-item-has-children > a .th-mean-expand {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  font-weight: 400;
+  font-size: 12px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  margin-top: -12.5px;
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(250, 231, 231);
+  color: var(--title-color);
+  box-shadow: 0 0 20px -8px rgba(173, 136, 88, 0.5);
+  border-radius: 50%;
+}
+
+.th-mobile-menu ul .th-item-has-children > a .th-mean-expand:before {
+  content: "\2b";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.th-mobile-menu ul .th-item-has-children > a:after {
+  content: "\f067";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 50px;
+  background-color: rgb(250, 231, 231);
+  float: right;
+  margin-top: 1px;
+}
+
+.th-mobile-menu ul .th-item-has-children.th-active > a .th-mean-expand:before {
+  content: "\f068";
+}
+
+.th-mobile-menu ul .th-item-has-children.th-active > a:after {
+  content: "\f068";
+}
+
+.th-mobile-menu > ul {
+  padding: 0 40px;
+}
+
+.th-mobile-menu > ul > li:last-child {
+  border-bottom: none;
+}
+
+.th-menu-toggle {
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  font-size: 20px;
+  border: none;
+  background-color: vars.$primary-500;
+  color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.th-menu-toggle:hover {
+  background-color: vars.$primary-500;
+}
+
+@media (max-width: 400px) {
+  .th-menu-wrapper .th-menu-area {
+    width: 100%;
+    max-width: 270px;
+  }
+
+  .th-mobile-menu > ul {
+    padding: 0 20px;
+  }
+}
+
+/*mobile menu end*/
+
+/*Desktop menu*/
+
+.menu {
+  background: vars.$primary-500;
+}
+
+.main-menu a {
+  display: block;
+  position: relative;
+  font-weight: 600;
+  font-size: 15px;
+  // text-transform: uppercase;
+}
+
+.main-menu a:hover {
+}
+
+.main-menu > ul > li {
+  // margin: 0 19px;
+}
+
+.main-menu > ul > li > a {
+  padding: 0 20px;
+  line-height: 85px;
+  cursor: pointer !important;
+}
+
+.main-menu ul li.active > a {
+
+  color: vars.$primary-500;
+}
+
+.sub-menu li a.active {
+
+  color:  vars.$primary-500;
+}
+
+.main-menu > ul > li > a:hover {
+
+}
+
+.main-menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu ul li {
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+}
+
+.main-menu ul li.menu-item-has-children > a:after {
+  content: "\f078";
+  display: inline-block;
+  position: relative;
+  font-family: "Font Awesome 6 Free";
+  margin-left: 4px;
+  font-weight: 600;
+  top: 0;
+  font-size: 0.9em;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.main-menu ul li.menu-item-has-children > a:hover:after {
+  content: "\f077";
+  // -webkit-transform: rotate(180deg);
+  // -ms-transform: rotate(180deg);
+  // transform: rotate(180deg);
+  // top: -3px;
+}
+
+.main-menu ul li:last-child {
+  margin-right: 0 !important;
+}
+
+.main-menu ul li:first-child {
+  margin-left: 0 !important;
+}
+
+.main-menu ul li:hover > ul.sub-menu {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  z-index: 9;
+}
+
+.main-menu ul.sub-menu {
+   column-count: 3;
+  position: absolute;
+  border-top: 2px solid vars.$primary-500;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  min-width: 230px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 7px;
+  left: -14px;
+  opacity: 0;
+  z-index: -1;
+  box-shadow: 0px 4px 15px rgba(1, 15, 28, 0.06);
+  border-radius: 0;
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px);
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.main-menu ul.sub-menu a {
+  font-size: 14px;
+  line-height: 30px;
+  padding: 4px 24px;
+  color: inherit;
+}
+
+.main-menu ul.sub-menu {
+  padding: 0;
+  left: 0;
+}
+
+.main-menu ul.sub-menu li {
+  display: block;
+  margin: 0 0;
+  // padding: 0px 9px;
+}
+
+.main-menu ul.sub-menu li.menu-item-has-children > a:after {
+  content: "\2b";
+  float: right;
+  top: 1px;
+  display: inline-block;
+}
+
+.main-menu ul.sub-menu li.menu-item-has-children > a:hover:after {
+  content: "\f068";
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.main-menu ul.sub-menu li a {
+  position: relative;
+  text-transform: capitalize;
+}
+
+// .main-menu ul.sub-menu li a:before {
+//   content: "\f26c";
+//   position: absolute;
+//   top: 10px;
+//   left: 10px;
+//   font-family: "Font Awesome 6 Free";
+//   width: 11px;
+//   height: 11px;
+//   text-align: center;
+//   border-radius: 50%;
+//   display: inline-block;
+//   font-size: 0.9em;
+//   line-height: 1;
+//   font-weight: 900;
+//   opacity: 0;
+//   visibility: visible;
+//   -webkit-transition: 0.3s ease-in-out;
+//   transition: 0.3s ease-in-out;
+// }
+
+// .main-menu ul.sub-menu li a:hover {
+//   padding-left: 23px;
+//   color: vars.$primary-500;
+// }
+
+// .main-menu ul.sub-menu li a:hover:before {
+//   visibility: visible;
+//   opacity: 1;
+//   left: 0;
+// }
+
+.main-menu ul.sub-menu li ul.sub-menu {
+  left: 100%;
+  right: auto;
+  top: 0;
+  margin: 0 0;
+  margin-left: 20px;
+}
+
+.main-menu ul.sub-menu li ul.sub-menu li ul {
+  left: 100%;
+  right: auto;
+}
+
+@media (max-width: 1500px) {
+  // .main-menu > ul > li {
+  //   margin: 0 13px;
+  // }
+}
+
+.menu-style1 > ul > li {
+  margin: 0 14px;
+}
+
+@media (max-width: 1299px) {
+  .menu-style1 > ul > li {
+    margin: 0 10px;
+  }
+}
+
+/*Desktop menu end*/

@@ -1,0 +1,33 @@
+.success-page {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.success-content {
+    padding: 40px 20px;
+}
+
+.success-content i {
+    color: #28a745;
+}
+
+.success-content .card {
+    border-radius: 12px;
+}
+
+.success-content .btn {
+    min-width: 180px;
+}
+
+.order-details-table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin: 0 auto;
+
+    td{
+      padding: 4px;
+      border: 1px solid #ddd;
+    }
+}

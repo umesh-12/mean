@@ -1,0 +1,51 @@
+/*All the custom styles are use ed here which applied to every where in the project*/
+// @use  "../../node_modules/font-awesome/scss/font-awesome.scss";
+
+/* use ing Bootstrap SCSS file. */
+
+// @use "bootstrap/scss/bootstrap";
+
+@use "abstracts/functions";
+@use "abstracts/mixins";
+
+@use "abstracts/variables";
+
+@use "base/global";
+@use "base/animations";
+@use "base/typography";
+@use "base/utilities";
+
+@use "components/button";
+@use "components/heading";
+@use "components/input";
+@use "components/modal";
+@use "components/table";
+@use "components/scrollbar";
+@use "components/form";
+@use "components/toastr";
+@use "components/accordion";
+@use "components/fckeditor";
+
+
+
+@use "layout/header";
+@use "layout/sidebar";
+
+@use "layout/layout";
+@use "layout/loader";
+@use "layout/menu";
+@use "layout/footer";
+
+// @use "pages/login";
+@use "pages/dashboard";
+
+@use "pages/login";
+@use "pages/admin-order";
+@use "pages/admin-products";
+@use "pages/company-profile";
+@use "pages/invoice";
+
+@use "pages/error-page";
+
+@use "custom";
+@use "responsive";

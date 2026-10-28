@@ -1,0 +1,12 @@
+.accordion-button{
+    font-weight: 500;
+}
+
+
+.accordion-button:not(.collapsed){
+    background-color: #d9eaee;
+    box-shadow: none;
+}
+.accordion-button:focus{
+    box-shadow: none; 
+}

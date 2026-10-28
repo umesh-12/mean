@@ -1,0 +1,42 @@
+// global
+@use '../abstracts/variables' as vars;
+
+/* Global scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: vars.$primary-0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: vars.$primary-0;
+
+  &:hover {
+    background: vars.$primary-500;
+  }
+}
+
+/* Body-specific scrollbar */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: vars.$primary-0;
+  border-radius: 30px;
+
+  &:hover {
+    background: vars.$primary-500;
+  }
+}
+
+/* Notice section scrollbar */
+.notice::-webkit-scrollbar {
+  width: 4px;
+}

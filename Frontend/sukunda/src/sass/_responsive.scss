@@ -1,0 +1,49 @@
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (max-width: 1660px) {
+  .col-3.col-xl-7.col-lg-12 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+  .header-icon{
+        flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 992px) {
+  .header-3{
+    padding:20px 0px;
+  }
+  .head-logo{
+    margin-bottom: 20px;
+  }
+  .product-grid,
+  .why-grid,
+  .counter-wrapper,
+  .footer-grid,
+  .benefit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid,
+  .why-grid,
+  .counter-wrapper,
+  .footer-grid,
+  .benefit-grid,
+  .banner-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (max-width: 576px) {
+}

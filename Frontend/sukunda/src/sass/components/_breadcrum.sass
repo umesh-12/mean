@@ -1,0 +1,43 @@
+
+@use "../abstracts/variables" as vars
+
+.bread
+    background: vars.$primary-500
+    height: 100px
+    margin-top: -1px
+    background-size: cover
+
+    .container,
+    .breadcrumb-outer
+
+        height: 100%
+
+.breadcrumb-outer
+    background: none
+    align-items: center
+    display: flex
+    justify-content: center
+    height: 100%
+
+    margin-left: 0
+    padding: 0
+    margin-bottom: 0
+    color: #fff
+
+.breadcrumb-item+.breadcrumb-item::before
+    content: "\f054"
+    color: #fff
+    font-family: "Font Awesome 6 Free"
+    font-weight: 600
+    font-size: 10px
+    margin: 0px 10px
+    position: relative
+    top: 1.3px
+
+.breadcrumb
+    margin: 0
+    a
+        color: #fff
+
+.breadcrumb-item.active
+    color: #fff

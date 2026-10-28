@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as vars;
+
+
+.testimonial {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    border: 1px solid vars.$border;
+    padding: 2rem;
+
+    &-thumb {
+        height: 100px;
+        flex: 0 0 100px;
+        border-radius: 100%;
+        padding: 5px;
+        border: 1px solid vars.$secondary-500;
+        overflow: hidden;
+    }
+
+    &-body {
+        flex: 1;
+    }
+
+    &-star {
+        color: #EF8C1C;
+    }
+
+    &-rating {
+        display: flex;
+        gap: 4px;
+    }
+
+    &-post {
+        font-weight: bold;
+        color: vars.$secondary-500;
+    }
+}

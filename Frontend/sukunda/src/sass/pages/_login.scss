@@ -1,0 +1,18 @@
+@use "sass:color";
+@use "../abstracts/variables" as vars;
+
+.btn-login {
+  height: 37px !important;
+  border-radius: 30px;
+}
+
+.dropdown-item {
+  padding: 0 12px;
+}
+
+.form-control-main {
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+  background-color: #f3f3f3;
+}

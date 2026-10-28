@@ -1,0 +1,231 @@
+.footer-2{
+  padding: 4rem 0;
+  border-top: 1px dashed #e5e5e5;
+}
+
+.footer-2 .top-footer{
+  padding: 4rem 0;
+}
+
+.footer-2 .center-footer{
+  padding: 0px 0 90px 0;
+}
+
+.footer-2 .icon-card-footer{
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.footer-2 .title-footer{
+  position: relative;
+}
+
+.footer-2 .drawer__nav-toggle--open{
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.footer-2 .fa{
+  font-size: 18px;
+  line-height: 1;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.fa-angle-down:before {
+  content: "\f107";
+}
+
+.fa-angle-up:before {
+  content: "\f106";
+}
+
+
+
+@media(max-width: 575px){
+  .footer-2{
+    padding: 3rem 0;
+  }
+
+
+  .footer-2 .footer-block__newsletter{
+    margin: 0 auto;
+  }
+
+
+  .footer-2 .drawer__nav-toggle--open{
+      display: block;
+  }
+
+  .menu-footer .footer-menu{
+      animation: all 0.5s ease-in;
+  }
+
+  .menu-footer.active .footer-menu{
+      display: block;
+  }
+}
+
+@media(max-width: 767px){
+  .footer-2 .text-content, .footer-2 .logo-footer, .footer-2 .menu-footer{
+    margin-bottom: 15px;
+  }
+
+  .bottom-footer-coppy{
+    text-align: center;
+  }
+
+  .footer-2 .icon-card-footer{
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+/* add */
+.logo-footer .logo{
+  margin-bottom: 20px;
+}
+.logo-footer .text-logo,.newsletter-description{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+.logo-footer .phone{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #000;
+}
+.logo-footer .phone svg{
+  margin-right: 5px;
+}
+.logo-footer .phone h3{
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--g-main);
+  margin-bottom: 25px;
+}
+.list-social__item{
+  width: 42px;
+  height: 42px;
+  background: #F5F5F5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease;
+}
+.list-social__item:hover{
+  background: #6839CC;
+}
+.list-social__item:hover svg{
+  fill: currentColor;
+  color: #fff;
+}
+/* menu footer */
+.footer-2 .title-footer{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.footer-menu .list-verticalmenu li a{
+  font-style: normal;
+  font-weight: 400;
+  transition: all .3s ease;
+  font-size: 14px;
+  line-height: 36px;
+  color: #666666;
+}
+.footer-menu .list-verticalmenu li:hover a{
+  color: var(--g-main);
+}
+/* newsletter */
+.newsletter-footer .newsletter-description span{
+  color: var(--g-main);
+}
+.newsletter-content{
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 700;
+  color: #000;
+  margin-top: 20px;
+}
+.newsletter-content .contact a{
+  display: block;
+  max-width: 50%;
+}
+.newsletter-content .contact a img{
+  max-width: 100%;
+  height: auto;
+}
+/* .newsletter-footer.custom-button i,.newsletter-footer.custom-button span{
+  display: none;
+}
+.newsletter-footer .icon-newsletter{
+  display: none;
+}
+.newsletter-footer.custom-button .icon-newsletter{
+  display: block;
+}
+.newsletter-footer.custom-button .button{
+
+  padding: 8px;
+  height: unset;
+  min-height: unset;
+  line-height: 1;
+  margin-right: 5px;
+} */
+/* bottom footer */
+.bottom-footer{
+  position: relative;
+  z-index: -1;
+  padding-top: 40px;
+  border-top: 1px dashed #e5e5e5;
+}
+.text-left-bottom,.footer-2 .footer__copyright{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  color: #666;
+}
+.newsletter-footer .field__label svg{
+  display: none;
+}
+@media (max-width:991px) {
+  .menu-item{
+    order: 1;
+  }
+  .list-text-item{
+    order: 0;
+  }
+  .newsletter-content{
+    margin-bottom: 30px;
+  }
+  .footer-2 .center-footer{
+    padding: 0;
+  }
+  .newsletter-content .contact a{
+    max-width: 100%;
+  }
+}
+
+
+.footer-2 .footer-menu{
+    text-align: left;
+}

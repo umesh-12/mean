@@ -1,0 +1,151 @@
+// src/sass/_variables.scss
+
+// ======================
+// Color System
+// ======================
+
+// Base Colors
+$white: #fff !default;
+
+// Grey Scale
+$grey-100: #c5c5c5 !default;
+$grey-200: #505651 !default;
+$grey-300: #373d38 !default;
+$grey-400: #2c312d !default;
+$grey-500: #050d06 !default;
+
+$border: $grey-100 !default;
+
+// green Scale
+$green-100: #67ca67 !default;
+$green-200: #4dc14d !default;
+$green-300: #34b834 !default;
+$green-400: #1aaf1a !default;
+$green-500: #01a601 !default;
+$green-600: #019501 !default;
+$green-700: #018501 !default;
+$green-800: #017401 !default;
+$green-900: #016401 !default;
+
+$red-500: #e12424 !default;
+$red-600: #cb2020 !default;
+
+$danger-500: $red-500;
+$danger-600: $red-600;
+
+// purple Scale
+$purple-100: #a083e9 !default;
+$purple-200: #906ee5 !default;
+$purple-300: #8059e1 !default;
+$purple-400: #7045de !default;
+$purple-500: #6030da !default;
+$purple-600: #562bc4 !default;
+$purple-700: #4d26ae !default;
+$purple-800: #432299 !default;
+$purple-900: #3a1d83 !default;
+
+// brown Scale
+$brown-100: #e3d3ad !default;
+$brown-200: #dfcba0 !default;
+$brown-300: #dac492 !default;
+$brown-400: #d6bc85 !default;
+$brown-500: #d1b577 !default;
+$brown-600: #bca36b !default;
+$brown-700: #a7915f !default;
+$brown-800: #927f53 !default;
+$brown-900: #7d6d47 !default;
+
+// Orange Scale
+$orange-300: #ff9356 !default;
+$orange-400: #ff8641 !default;
+$orange-500: #ff782c !default;
+$orange-600: #e66c28 !default;
+$orange-700: #cc6023 !default;
+$orange-800: #b3541f !default;
+
+// blue Scale
+$blue-100: #679ec4 !default;
+$blue-200: #4e8eba !default;
+$blue-300: #357db0 !default;
+$blue-400: #1b6da6 !default;
+$blue-500: #025d9c !default;
+$blue-600: #02548c !default;
+$blue-700: #024a7d !default;
+$blue-800: #01416d !default;
+
+// Primary Scale
+$primary-100: $brown-100 !default;
+$primary-200: $brown-200 !default;
+$primary-300: $brown-300 !default;
+$primary-400: $brown-400 !default;
+$primary-500: $brown-500 !default;
+$primary-600: $brown-600 !default;
+$primary-700: $brown-700 !default;
+$primary-800: $brown-800 !default;
+
+$secondary-300: $green-300 !default;
+$secondary-400: $green-400 !default;
+$secondary-500: $green-500 !default;
+$secondary-600: $green-600 !default;
+
+// UI Colors
+$border: $grey-400 !default;
+$body-text: $grey-400 !default;
+$th-bg: #e7eef0 !default;
+$text-primary: $primary-500 !default;
+$text-secondary: $secondary-500 !default;
+
+// ======================
+// Typography
+// ======================
+
+// Base Typography
+$font-family-base: "Inter", sans-serif !default;
+$font-size-base: 14px !default; // 15px
+$line-height-base: 1.857 !default; // ~26px/14px
+$font-weight-base: 400 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 500 !default;
+
+// Headings
+// $headings-font-family-1: "Nunito Sans", sans-serif !default;
+
+$headings-font-family-1: "Playfair Display", serif !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.3 !default;
+$headings-color: $grey-500 !default;
+$headings-margin-bottom: 1.5rem !default;
+
+$h1-font-size: 3.875rem !default; // 62px
+$h2-font-size: 2rem !default; // 32px
+$h3-font-size: 1.5625rem !default; // 25px
+$h4-font-size: 1.25rem !default; // 20px
+
+// ======================
+// Body & Layout
+// ======================
+
+$body-bg: $white !default;
+$body-color: #fbf9f4 !default;
+
+// ======================s
+// Links
+// ======================
+
+$link-color: $body-text !default;
+$link-decoration: none !default;
+$link-hover-color: $primary-500 !default;
+$link-hover-decoration: none !default;
+
+// ======================
+// Spacing & Paragraphs
+// ======================
+
+$paragraph-margin-bottom: 1rem !default;
+
+// ======================
+// Assets Path
+// ======================
+
+$imgUrl: "../../dist/images/" !default;

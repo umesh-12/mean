@@ -1,0 +1,163 @@
+// src/sass/_variables.scss
+
+// ======================
+// Color System
+// ======================
+
+// Base Colors
+$white: #fff !default;
+
+// Grey Scale
+$grey-50: #dcdddf !default;
+$grey-100: #c5c5c5 !default;
+$grey-200: #9a9fa3 !default;
+
+$grey-300: #686e74 !default;
+$grey-400: #353e46 !default;
+$grey-500: #030e18 !default;
+
+// green Scale
+$green-100: #c0ddc7 !default;
+$green-200: #6caf7b !default;
+$green-300: #57a469 !default;
+$green-400: #429856 !default;
+$green-500: #2d8d43 !default;
+$green-600: #297f3c !default;
+$green-700: #247136 !default;
+$green-800: #20632f !default;
+$green-900: #1b5528 !default;
+
+
+$red-500: #e12424 !default;
+$red-600: #cb2020 !default;
+
+$danger-500: $red-500;
+$danger-600: $red-600;
+
+
+
+// purple Scale
+$purple-100: #a083e9 !default;
+$purple-200: #906ee5 !default;
+$purple-300: #8059e1 !default;
+$purple-400: #7045de !default;
+$purple-500: #6030da !default;
+$purple-600: #562bc4 !default;
+$purple-700: #4d26ae !default;
+$purple-800: #432299 !default;
+$purple-900: #3a1d83 !default;
+
+// brown Scale
+$brown-100: #e3d3ad !default;
+$brown-200: #dfcba0 !default;
+$brown-300: #dac492 !default;
+$brown-400: #d6bc85 !default;
+$brown-500: #D1B577 !default;
+$brown-600: #bca36b !default;
+$brown-700: #a7915f !default;
+$brown-800: #927f53 !default;
+$brown-900: #7d6d47 !default;
+
+
+// Teal Scale
+$teal-300: #4295aa !default;
+$teal-400: #2b88a0 !default;
+$teal-500: #137b95 !default;
+$teal-600: #116f86 !default;
+$teal-700: #0f6277 !default;
+$teal-800: #285966 !default;
+
+// blue grey
+$blue-grey-800: #242e37 !default;
+$blue-grey-700: #29343e !default;
+$blue-grey-600: #2e3b46 !default;
+$blue-grey-500: #33414e !default;
+$blue-grey-400: #475460 !default;
+$blue-grey-300: #5c6771 !default;
+$blue-grey-200: #707a83 !default;
+$blue-grey-100: #858d95 !default;
+$blue-grey-0: #d9dbdd !default;
+
+// Orange Scale
+$orange-300: #ff9356 !default;
+$orange-400: #ff8641 !default;
+$orange-500: #ff782c !default;
+$orange-600: #e66c28 !default;
+$orange-700: #cc6023 !default;
+$orange-800: #b3541f !default;
+
+// Primary Scale
+$primary-0: $blue-grey-0 !default;
+$primary-100: $brown-100 !default;
+$primary-200: $brown-200 !default;
+$primary-300: $brown-300 !default;
+$primary-400: $brown-400 !default;
+$primary-500: $brown-500 !default;
+$primary-600: $brown-600 !default;
+$primary-700: $brown-700 !default;
+$primary-800: $brown-800 !default;
+
+$secondary-300: $orange-300 !default;
+$secondary-400: $orange-400 !default;
+$secondary-500: $orange-500 !default;
+$secondary-600: $orange-600 !default;
+
+// UI Colors
+$border: $grey-100 !default;
+$body-text: $grey-400 !default;
+$th-bg: #e7eef0 !default;
+$text-primary: $primary-500 !default;
+$text-secondary: $secondary-500 !default;
+
+// ======================
+// Typography
+// ======================
+
+// Base Typography
+$font-family-base: "Roboto", sans-serif !default;
+$font-size-base: 0.9375rem !default; // 15px
+$line-height-base: 1.857 !default; // ~26px/14px
+$font-weight-base: 400 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 500 !default;
+
+// Headings
+$headings-font-family-1: "Quicksand", serif !default;
+$headings-font-weight: 600 !default;
+$headings-line-height: 1.3 !default;
+$headings-color: $grey-500 !default;
+$headings-margin-bottom: 1.5rem !default;
+
+$h1-font-size: 1.5rem !default; // 24px
+$h2-font-size: 1.25rem !default; // 20px
+$h3-font-size: 18px !default; // 18px
+$h4-font-size: 0.9375rem !default; // 15px
+
+// ======================
+// Body & Layout
+// ======================
+
+$body-bg: $white !default;
+$body-color: $body-text !default;
+
+// ======================
+// Links
+// ======================
+
+$link-color: $body-text !default;
+$link-decoration: none !default;
+$link-hover-color: $primary-500 !default;
+$link-hover-decoration: none !default;
+
+// ======================
+// Spacing & Paragraphs
+// ======================
+
+$paragraph-margin-bottom: 1rem !default;
+
+// ======================
+// Assets Path
+// ======================
+
+$imgUrl: "../../dist/images/" !default;

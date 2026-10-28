@@ -1,0 +1,103 @@
+@use "../abstracts/variables" as vars;
+
+.shop-table-wrap {
+  background: #fff;
+}
+
+.shop-table {
+  width: 100%;
+  background: #fff;
+  border: 1px solid vars.$border;
+
+  th {
+    text-transform: uppercase;
+  }
+
+  td,
+  th {
+    border: 1px solid vars.$border;
+    border-right: none;
+    border-left: none;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.remove {
+  color: vars.$secondary-500;
+}
+
+.coupon {
+  display: flex;
+}
+
+.input-text-coupon {
+  height: 40px;
+  padding-left: 1rem;
+  border: 1px solid vars.$border;
+  flex: 0 0 250px;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart-totals {
+  text-align: right;
+  flex-direction: column;
+  justify-self: flex-end;
+}
+
+@media only screen and (max-width: 992px) {
+}
+
+@media only screen and (max-width: 767px) {
+  .shop-table th,
+  .shop-table tr,
+  .shop-table td {
+    display: block;
+    border: none;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .shop-table th {
+    display: none;
+  }
+
+  .cart-single {
+    .product-remove {
+      text-align: right;
+    }
+
+    .remove-btn {
+      height: 32px;
+      width: 32px;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+  }
+
+  .product-subtotal {
+    border-bottom: 1px solid vars.$border !important;
+  }
+
+  .product-actions {
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cart-totals {
+    justify-self: inherit;
+  }
+
+  .cart-totals-table.shop-table td {
+    text-align: right;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+}

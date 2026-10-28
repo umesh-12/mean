@@ -1,0 +1,14 @@
+@use "../abstracts/variables" as vars;
+
+.feature-strip {
+  background: #1b9b42;
+  color: #fff;
+  padding: 18px 0;
+}
+
+.strip-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}

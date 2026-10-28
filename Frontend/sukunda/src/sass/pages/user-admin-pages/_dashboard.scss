@@ -1,0 +1,239 @@
+@use "../../abstracts/variables" as vars;
+
+.body-wraper {
+  background: #f8faf7;
+}
+
+.dashboard-wrapper {
+  min-height: 100vh;
+}
+
+/* Stat Cards */
+.metric-card {
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+}
+
+.icon-shape {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* User Avatar Initial Box */
+.avatar-box {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, vars.$primary-500, vars.$primary-400);
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgb(17 103 162 / 30%);
+}
+
+/* Recent Order Row */
+.order-row {
+  border: 1px solid #f1f3f5;
+  background-color: #ffffff;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.order-row:hover {
+  background-color: #f8f9fa;
+}
+
+.badge-color.badge {
+  color: inherit !important;
+}
+
+//account nav
+@media (min-width: 992px) {
+  .account-nav {
+    border-radius: 2px;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 10px 30px;
+  }
+  .account-nav__title {
+    font-size: 22px;
+    padding: 24px 26px 0;
+    margin-bottom: 1rem;
+  }
+  .account-nav__item a {
+    margin-left: -2px;
+    border-left: 2px solid #f0f0f0;
+  }
+  .account-nav__item a:hover {
+    background-color: #f7f7f7;
+  }
+  .account-nav__item--active a {
+    border-left: 2px solid vars.$primary-500;
+  }
+  .account-nav__item--active a {
+    font-weight: 600;
+    color: rgb(17, 33, 71);
+  }
+  .account-nav__item a {
+    display: block;
+    padding: 5px 26px;
+  }
+}
+
+@media (max-width: 991px) {
+  .account-nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .account-nav__title {
+    display: none;
+  }
+  .account-nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    width: 100%;
+    border-bottom: 2px solid #f0f0f0;
+  }
+
+  .account-nav__item a {
+    padding: 8px 16px;
+    margin-bottom: -2px;
+    border-bottom: 2px solid #f0f0f0;
+    display: block;
+    font-size: 1.2rem;
+  }
+  .account-nav__item--active a {
+    color: rgb(17, 33, 71);
+    font-weight: 500;
+    border-color: #36c;
+    background-color: #f7f7f7;
+  }
+}
+
+//dashboard
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dashboard__orders {
+  margin-top: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .dashboard__address,
+  .dashboard__profile {
+    width: calc(50% - 12px);
+  }
+}
+
+@media (max-width: 767px) {
+  .dashboard__address,
+  .dashboard__profile {
+    width: 100%;
+  }
+  .dashboard__address {
+    margin-top: 24px;
+  }
+}
+
+///profile
+
+.card .profile-card__avatar img {
+  height: 90px;
+}
+
+.profile-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card__avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.profile-card__avatar img {
+  border-radius: 50%;
+  max-width: 100%;
+}
+.profile-card__name {
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 18px;
+}
+.profile-card__email {
+  margin-bottom: 24px;
+}
+
+///profile end
+
+//card
+.card-footer,
+.card-header {
+  padding: 1.25rem 2rem;
+  border-top: none;
+  border-bottom: none;
+  background-color: transparent;
+}
+
+.card-divider {
+  height: 2px;
+  background: #f0f0f0;
+}
+
+// .card-table {
+//     font-size: 15px;
+// }
+
+.card-table table {
+  width: 100%;
+  min-width: 500px;
+}
+
+.card-table thead th {
+  border-bottom: 2px solid #f0f0f0;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 12px;
+}
+
+.card-table td:first-child,
+.card-table th:first-child {
+  padding-left: 2rem;
+}
+.card-table tbody td,
+.card-table tbody th,
+.card-table tfoot td,
+.card-table tfoot th {
+  padding: 12px;
+}
+.card-table tbody tr:hover > *,
+.card-table tfoot tr:hover > * {
+  background-color: #f7f7f7;
+}
+
+.card-table a {
+  color: vars.$primary-500;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.card {
+  padding: 24px;
+  text-align: left;
+}
+.dashboard__orders.card {
+  padding: 24px;
+}

@@ -1,0 +1,164 @@
+/* #btn================================================== */
+@use "sass:color";
+@use "../abstracts/variables" as vars;
+
+app-layout .btn {
+  display: inline-block;
+  border: none;
+  color: #fff;
+}
+
+ .btn-primary {
+  background: vars.$primary-500 !important;
+  color: #fff !important;
+  transition:
+    background 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: #fff;
+    background: vars.$primary-600 !important;
+  }
+
+  &:focus-visible,
+  &:active,
+  &:focus {
+    background: vars.$primary-600 !important;
+    color: #fff !important;
+  }
+
+  &:first-child:active {
+    color: #fff;
+    background-color: vars.$primary-600 !important;
+    border-color: vars.$primary-600 !important;
+  }
+}
+
+app-layout .btn-secondary {
+  background: linear-gradient(
+    280deg,
+    rgba(255, 81, 47, 1) 0%,
+    rgba(240, 152, 25, 1) 100%
+  );
+  transition:
+    background 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: #fff;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 81, 47, 1) 0%,
+      rgba(240, 152, 25, 1) 100%
+    );
+  }
+
+  &:focus-visible,
+  &:active,
+  &:focus {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 81, 47, 1) 0%,
+      rgba(240, 152, 25, 1) 100%
+    );
+    color: #fff;
+  }
+
+  &:first-child:active {
+    color: #fff;
+    background-color: vars.$secondary-500 !important;
+    border-color: vars.$secondary-500 !important;
+  }
+
+  &.clicked {
+    animation: clickBounce 0.3s ease;
+  }
+}
+
+@keyframes clickBounce {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+app-layout .btn-danger {
+  background: vars.$red-500;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+    background: vars.$red-600;
+  }
+
+  &:focus-visible,
+  &:active,
+  &:focus {
+    background: vars.$red-600;
+    color: #fff;
+  }
+}
+
+/*btn size*/
+app-layout .btn:focus,
+button:focus {
+  outline: 0;
+}
+
+app-layout .btn-link {
+  text-decoration: none;
+  color: vars.$secondary-500;
+
+  &:hover {
+    color: vars.$secondary-500;
+    text-decoration: underline;
+  }
+}
+
+app-layout .btnLink {
+  color: color.scale(vars.$secondary-500, $lightness: -10%);
+  font-weight: 500;
+
+  &:hover {
+    color: color.scale(vars.$secondary-500, $lightness: -20%);
+  }
+}
+
+app-layout .btn-groups {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+app-layout .btn-outer .select2 {
+  width: 100% !important;
+}
+
+app-layout .btn-sm {
+  padding: 0.25rem 0.5rem;
+}
+
+app-layout .btn-default {
+  background: vars.$grey-50;
+  color: vars.$grey-400;
+  border: 1px solid vars.$grey-100;
+  &:hover {
+    background: vars.$grey-50;
+  }
+}
+
+app-layout .btn-outline-default {
+  border: 1px solid vars.$grey-100;
+  color: vars.$grey-400;
+
+  &:hover {
+    border: 1px solid vars.$grey-100;
+    color: vars.$grey-400;
+  }
+}

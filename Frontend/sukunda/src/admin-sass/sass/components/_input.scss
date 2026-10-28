@@ -1,0 +1,14 @@
+input:focus,select:focus{
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+.select2-container .select2-selection--single{
+  height: 33px !important;
+  line-height: 33px;
+
+}
+
+.select2 {
+  height: 33px;
+}

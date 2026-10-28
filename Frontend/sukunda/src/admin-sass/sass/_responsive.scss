@@ -1,0 +1,68 @@
+@media only screen and (min-width: 1400px) {
+    body {
+        font-size: 14px !important;
+        line-height: 26px !important;
+    }
+
+    .table,
+    table {
+        font-size: 14px;
+    }
+
+    .mdc-button {
+        font-size: 14px !important;
+    }
+
+    .mat-mdc-menu-content,
+    .mat-mdc-menu-content .mat-mdc-menu-item .mat-mdc-menu-item-text {
+        font-size: 14px !important;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+
+    .toggle-dropdown .dropdown-menu .dropdown-item {
+        font-size: 14px !important;
+    }
+
+    .mat-h3,
+    .mat-subtitle-1,
+    .mat-typography .mat-h3,
+    .mat-typography .mat-subtitle-1,
+    .mat-typography h3,
+    .mat-typography .h3 {
+        font-size: 17px;
+    }
+
+    .indicators {
+        font-size: 12px;
+    }
+    .hr-roster-content {
+        min-height: 660px;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 992px) {}
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .footer {
+        .container-fluid {
+            display: block;
+        }
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+
+}
+
+
+@media only screen and (max-width: 576px) {}

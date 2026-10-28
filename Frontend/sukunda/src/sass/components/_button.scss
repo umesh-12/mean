@@ -1,0 +1,247 @@
+/* #btn================================================== */
+@use "sass:color";
+@use "../abstracts/variables" as vars;
+
+.btn {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  border-radius: 0;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 1.5em !important;
+}
+
+.btn-white {
+  background: #fff;
+  color: vars.$secondary-500;
+
+  &:hover {
+    color: #fff;
+    background: vars.$primary-500;
+  }
+
+  &:focus-visible,
+  &:active,
+  &:focus {
+    background: white;
+    color: vars.$grey-500;
+  }
+}
+
+.btn-dark {
+  background: vars.$grey-500;
+  color: #fff;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    background-color 0.3s ease;
+
+  &:hover {
+    color: #fff;
+    background: vars.$grey-500;
+    transform: scale(1.01);
+  }
+
+  &:focus-visible,
+  &:active,
+  &:focus {
+    background: vars.$secondary-500;
+    color: #fff;
+  }
+
+  &:first-child:active {
+    color: #fff;
+    background-color: vars.$secondary-500 !important;
+    border-color: vars.$secondary-500;
+  }
+}
+
+.btn-outline-dark {
+  border: 1px solid vars.$grey-500;
+  color: vars.$grey-500;
+
+  &:hover {
+    color: #fff;
+    border: 1px solid vars.$grey-500;
+    background: vars.$grey-500;
+  }
+
+  &:focus-visible,
+  &:active,
+  &:focus {
+    background: vars.$grey-500;
+    color: #fff;
+  }
+
+  &:first-child:active {
+    color: #fff;
+    background-color: vars.$grey-500 !important;
+    border-color: vars.$grey-500;
+  }
+}
+
+.btn-outline-primary {
+  border: 2px solid vars.$primary-800 !important;
+  color: vars.$primary-800;
+
+  &:hover {
+    color: #fff;
+    border: 2px solid vars.$primary-800;
+    background: vars.$primary-800;
+  }
+
+  &:focus-visible,
+  &:active,
+  &:focus {
+    background: vars.$primary-800 !important;
+    color: #fff;
+  }
+
+  &:first-child:active {
+    color: #fff;
+    background-color: vars.$primary-800 !important;
+    border-color: vars.$primary-800;
+  }
+}
+
+.btn-primary {
+  background: vars.$primary-500 !important;
+  color: #fff !important;
+  transition:
+    background 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: #fff;
+    background: vars.$primary-500;
+  }
+
+  &:focus-visible,
+  &:active,
+  &:focus {
+    background: vars.$primary-500 !important;
+    color: #fff !important;
+  }
+
+  &:first-child:active {
+    color: #fff;
+    background-color: vars.$primary-500 !important;
+    border-color: vars.$primary-500 !important;
+  }
+}
+
+.btn-secondary {
+  background: vars.$secondary-500 !important;
+  color: #fff !important;
+  transition:
+    background 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: #fff;
+    background: vars.$secondary-600;
+  }
+
+  &:focus-visible,
+  &:active,
+  &:focus {
+    background: vars.$secondary-600;
+    color: #fff;
+  }
+
+  &:first-child:active {
+    color: #fff;
+    background-color: vars.$secondary-600 !important;
+    border-color: vars.$secondary-600 !important;
+  }
+
+  &.clicked {
+    animation: clickBounce 0.3s ease;
+  }
+}
+
+@keyframes clickBounce {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-danger {
+  background: vars.$red-500;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+    background: vars.$red-600;
+  }
+
+  &:focus-visible,
+  &:active,
+  &:focus {
+    background: vars.$red-600;
+    color: #fff;
+  }
+}
+
+/*btn size*/
+.btn:focus,
+button:focus {
+  outline: 0;
+}
+
+.btn-link {
+  display: inline-block;
+  text-decoration: none;
+  color: vars.$primary-500;
+
+  &:hover {
+    color: vars.$primary-500;
+    text-decoration: underline;
+  }
+}
+
+.btnLink {
+  color: vars.$primary-500;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    // text-decoration: underline !important;
+    color: vars.$primary-500;
+  }
+}
+
+.btn-groups {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.btn-outer .select2 {
+  width: 100% !important;
+}
+
+.btn-sm {
+  height: 36px;
+  line-height: 36px;
+  padding: 0 1em;
+}
+
+.btn-sm{
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.cartbtn.bg-light:hover {
+  color: vars.$grey-500 !important;
+  cursor: not-allowed;
+}

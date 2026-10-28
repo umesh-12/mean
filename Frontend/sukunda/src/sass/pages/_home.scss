@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as vars;
+
+.center {
+  text-align: center;
+}
+
+
+/* =========================
+    RESPONSIVE ONLY
+========================= */
+
+@media (max-width: 992px) {
+  .navbar ul {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .top-flex,
+  .nav-wrapper,
+  .footer-bottom-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+.splide__slide{
+  border: none !important;
+}

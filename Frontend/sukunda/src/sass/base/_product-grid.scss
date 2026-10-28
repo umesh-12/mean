@@ -1,0 +1,85 @@
+.product-grid-6 {
+  display: flex !important;
+}
+.product-grid-6 .card--product {
+  max-width: 50%;
+  margin-right: 25px;
+}
+.product-grid-6 .card-information {
+  flex: 1;
+}
+.card-wrapper.product-grid-6:hover .card--product {
+  border: none;
+}
+.product-grid-6 .price-item--sale,
+.product-grid-6 .price__regular .price-item--regular {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.product-grid-6 .card-information__text {
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.product-grid-6 .rating-star:before {
+  font-size: 18px;
+}
+.product-grid-6 .product-des {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 12px 0 20px;
+}
+.product-grid-6 .product-countdown h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.product-grid-6 .product-countdown p {
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.product-grid-6 #low-stock-block {
+  display: block;
+  margin-top: 30px;
+}
+.product-grid-6 p {
+  display: none;
+}
+.product-grid-6 {
+  padding: 0 5px;
+}
+.product-grid-6 .progress {
+  height: 6px;
+}
+.product-grid-6 #low-stock-block .progress-bar {
+  background: #6839cc;
+}
+@media (max-width: 575px) {
+  .product-grid-6 {
+    flex-direction: column;
+  }
+  .product-grid-6 .card--product {
+    max-width: 100%;
+    margin-right: 0;
+  }
+}

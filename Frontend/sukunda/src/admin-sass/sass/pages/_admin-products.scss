@@ -1,0 +1,114 @@
+// Import necessary variables file
+@use '../abstracts/variables' as vars; // Assuming this path is correct for your variables file
+
+
+.admin .card {
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+
+.admin .product-card {
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.admin .product-card-outer {
+    box-shadow: none;
+    border: 1px solid vars.$border;
+    margin-bottom: 20px;
+    border-radius: 12px;
+
+}
+
+.admin .badge{
+    font-size: 11px;
+}
+
+
+.admin .product-card:hover {
+    box-shadow: none !important;
+    transform: translate(0) !important;
+}
+
+.admin .card-header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding-left: 12px;
+
+    .search-box {
+        width: 300px;
+
+        input[type='text'] {
+
+            padding-left: 12px;
+        }
+    }
+}
+
+.admin .product-card {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    background: #fff;
+}
+
+.admin .product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.admin .product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: content;
+    border-radius: 8px;
+}
+
+.admin .product-content {
+    flex: 1;
+}
+
+.admin .product-content p {
+    margin-bottom: 5px;
+}
+
+.admin .product-content h6 {
+    font-weight: 600;
+}
+
+
+.admin .product-content-left {
+    flex: 1;
+}
+
+
+.admin .price {
+    color: #198754;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.badge {
+    border-radius: 4px;
+    padding: 4px 16px;
+    background-color: #198754;
+    color: #fff;
+    margin: 12px 15px;
+}
+
+@media (max-width: 768px) {
+    .admin .product-card {
+        flex-direction: column;
+    }
+
+    .admin .product-image {
+        width: 100%;
+        height: 200px;
+    }
+}

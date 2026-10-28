@@ -1,0 +1,45 @@
+@use "sass:color"; // Importing the Sass color module
+@use "../sass/abstracts/variables" as vars; // Use the 'vars' namespace to access variables
+
+#bestseller .swiper {
+  overflow: inherit !important;
+}
+
+.menu {
+  background: none;
+}
+.header-group-action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0;
+  gap: 32px;
+}
+
+.splide__arrow {
+  border-radius: 0 !important;
+  width: 50px !important;
+  height: 50px !important;
+  background: transparent;
+  border: 2px solid var(--gray4-color);
+  color: var(--primary-color);
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+
+  &:hover {
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+  &:hover svg path{
+    fill: #fff;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid--5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

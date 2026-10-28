@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as vars;
+
+
+
+.product-media {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    &-img {
+        flex: 0 0 255px;
+        max-width: 255px;
+    }
+
+    &-title {
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    &-meta {
+        display: flex;
+        gap: 1rem;
+        color: #9da1b1;
+        margin-bottom: 8px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .product-media-img {
+        flex: 0 0 200px;
+        max-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .col-md-12.col-lg-6+.col-md-12.col-lg-6 {
+        margin-top: 32px;
+    }
+
+    .product-media-img {
+        flex: 0 0 185px;
+        max-width: 185px;
+    }
+}
+
+
+
+@media only screen and (max-width: 767px) {}
+
+
+@media only screen and (max-width: 576px) {
+     .product-media-img {
+        flex: 0 0 125px;
+        max-width: 125px;
+    }
+}

@@ -1,0 +1,125 @@
+//height & width according to vw from 20 - 100
+
+@media (min-width: 320px) {
+  @for $i from 20 through 100 {
+    .h-lg-#{$i} {
+      height: 300px;
+    }
+
+    .w-lg-#{$i} {
+      width: 90vw;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  @for $i from 20 through 100 {
+    .h-lg-#{$i} {
+      height: #{$i}vh;
+    }
+
+    .w-lg-#{$i} {
+      width: #{$i}vw;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  @for $i from 20 through 100 {
+    .h-xl-#{$i} {
+      height: #{$i}vh;
+    }
+
+    .w-xl-#{$i} {
+      width: #{$i}vw;
+    }
+  }
+}
+
+// 4-point grid spacing generator (up to 100px or more as needed)
+$grid-unit: 4;
+$max-steps: 25; // 25 x 4px = 100px
+
+// Padding Utilities
+@for $i from 1 through $max-steps {
+  $value: $i * $grid-unit;
+
+  .p-t-#{$value} {
+    padding-top: #{$value}px !important;
+  }
+
+  .p-b-#{$value} {
+    padding-bottom: #{$value}px !important;
+  }
+
+  .p-l-#{$value} {
+    padding-left: #{$value}px !important;
+  }
+
+  .p-r-#{$value} {
+    padding-right: #{$value}px !important;
+  }
+
+  .p-tb-#{$value} {
+    padding-top: #{$value}px !important;
+    padding-bottom: #{$value}px !important;
+  }
+
+  .p-lr-#{$value} {
+    padding-left: #{$value}px !important;
+    padding-right: #{$value}px !important;
+  }
+}
+
+// Margin Utilities
+@for $i from 1 through $max-steps {
+  $value: $i * $grid-unit;
+
+  .m-t-#{$value} {
+    margin-top: #{$value}px !important;
+  }
+
+  .m-b-#{$value} {
+    margin-bottom: #{$value}px !important;
+  }
+
+  .m-l-#{$value} {
+    margin-left: #{$value}px !important;
+  }
+
+  .m-r-#{$value} {
+    margin-right: #{$value}px !important;
+  }
+
+  .m-tb-#{$value} {
+    margin-top: #{$value}px !important;
+    margin-bottom: #{$value}px !important;
+  }
+
+  .m-lr-#{$value} {
+    margin-left: #{$value}px !important;
+    margin-right: #{$value}px !important;
+  }
+}
+
+// table
+
+@mixin table-height($i) {
+  .table__wrapper-#{$i} {
+    height: #{$i}vh;
+    max-height: #{$i}vh;
+  }
+}
+
+@for $i from 20 through 80 {
+  @include table-height($i);
+}
+
+@media (min-width: 1400px) {
+  @for $i from 20 through 80 {
+    .table_xxl-#{$i} {
+      height: #{$i}vh;
+      max-height: #{$i}vh;
+    }
+  }
+}

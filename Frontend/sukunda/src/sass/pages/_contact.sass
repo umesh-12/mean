@@ -1,0 +1,94 @@
+@use '../abstracts/variables' as vars
+.contact-text
+    margin-bottom: 20px
+    line-height: 26px
+
+.contact-form
+
+    label
+        display: block
+
+    input
+        height: 40px
+        padding-left: 10px
+        border-radius: 0
+
+    textarea
+        width: 100%
+        padding-left: 10px
+        padding-top: 5px
+        height: 110px
+
+    .btn
+        text-transform: uppercase
+
+//contact-icons
+
+.contact-icons
+    text-align: center
+
+.contact-icon
+
+    padding: 20px
+
+    i
+        height: 56px
+        width: 56px
+        border-radius: 100%
+        -webkit-border-radius: 100%
+        background: vars.$secondary-500
+        color: #fff
+        font-size: 24px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        margin-bottom: 24px
+
+    a
+        &:hover
+            text-decoration: underline
+            color: vars.$secondary-500
+
+    h3
+        margin-bottom: 8px
+
+    p
+        margin-bottom: 0
+
+.contact-box
+    padding: 30px
+    background: #efefef
+
+.map-wrap iframe
+    width: 100%
+    height: 469px
+
+@media screen and (max-width: 767px)
+    .map-wrap
+        iframe
+            width: 100%
+            height: 300px
+
+.form-group
+    margin-bottom: 1rem
+
+.form-control:focus
+    box-shadow: none
+    border-color: vars.$primary-500 !important
+
+@media screen and (max-width: 992px)
+    .contact-icons.grid--4
+        grid-template-columns: repeat(2, 1fr)
+
+@media screen and (max-width: 767px)
+    .contact-icons.grid--3
+        grid-template-columns: 1fr
+
+@media screen and (max-width: 576px)
+
+    .contact-icons.grid--4
+        grid-template-columns: 1fr
+
+.map-wrap iframe
+    width: 100%

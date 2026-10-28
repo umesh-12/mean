@@ -1,0 +1,197 @@
+.banner-grid {
+  width: 100%;
+  display: block !important;
+}
+
+.banner-grid .button-content {
+  text-align: unset;
+  width: unset;
+}
+.advanced-image-blog {
+  position: relative;
+}
+.banner-image {
+  position: relative;
+}
+
+.product-banner .banner-grid-content {
+  min-height: 554px !important;
+}
+
+.banner-grid-style-1 {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  right: 1.5rem;
+  left: 1.5rem;
+  bottom: 0;
+  padding: 3rem;
+}
+
+.banner-grid-style-2 {
+  padding: 3rem;
+}
+
+.title-section em {
+  color: red;
+}
+
+.banner-content {
+  align-items: center;
+}
+
+.banner-image-hover {
+  overflow: hidden;
+}
+
+.banner-image-hover:before,
+.banner-image-hover:after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+}
+.banner-image-hover:before {
+  border-top: 0.1rem solid #fff;
+  border-bottom: 0.1rem solid #fff;
+  transform: scale(0, 1);
+}
+.banner-image-hover:after {
+  transform: scale(1, 0);
+  border-left: 0.1rem solid #fff;
+  border-right: 0.1rem solid #fff;
+}
+.banner-image-hover:hover:before,
+.banner-image-hover:hover:after {
+  transform: scale(1);
+  opacity: 1;
+}
+.banner-image-hover img {
+  transition: all 0.5s ease-in-out;
+}
+.banner-image-hover:hover img {
+  transform: scale(1.02);
+}
+
+.banner-grid-content.image-banner-grid__media--placeholder.placeholder {
+  background: transparent;
+}
+
+.image-banner-grid__media--placeholder .placeholder-svg {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .banner-grid-content.image-banner-grid__media--placeholder.placeholder {
+    margin-bottom: 15px;
+  }
+}
+/* add */
+.banner-grid .banner-grid-content h5 {
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+.banner-grid .banner-grid-content h3 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
+  font-family: "Nunito Sans", sans-serif;
+  margin-bottom: 10px;
+}
+.banner-grid .banner-grid-content .text-sale {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.banner-grid .banner-grid-content .text-sale .persent {
+  color: var(--g-main);
+}
+/* numner sa;e */
+.banner-grid .number-sale {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.2;
+  align-items: center;
+  font-family: "Nunito Sans", sans-serif;
+}
+.banner-grid .number-sale .dv {
+  font-size: 20px;
+  line-height: 1.4;
+  text-transform: capitalize;
+  margin-left: 5px;
+}
+.banner-grid .number-sale .dv p {
+  margin: 0;
+}
+.banner-grid .banner-content .banner-grid-style-1 > p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.banner-grid .button-content span {
+  margin-top: 40px;
+  padding: 5px 10px;
+}
+.banner-grid .phone-number {
+  margin-top: 40px;
+}
+.banner-grid .sale-des {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 50px;
+}
+/* .banner-grid .banner-des img{
+    margin-top: 20px;
+} */
+.banner-grid .phone {
+  font-size: 16px;
+  font-weight: 600;
+}
+.banner-grid .text-up {
+  font-size: 20px;
+  line-height: 1.3;
+}
+.banner-grid .special {
+  font-family: "Satisfy";
+  line-height: 0.9;
+  margin-top: -35px;
+  display: block;
+  font-weight: 400;
+}
+.banner-grid .banner-grid-content {
+  border-radius: 5px;
+  min-height: 350px;
+}
+.banner-grid-items {
+  margin-bottom: 30px;
+}
+// .slide-show .banner-grid-content {
+//     min-height: 292px !important;
+// }
+
+.product-banner .banner-image {
+  height: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .product-banner .banner-grid-style-1 {
+    padding: 20px !important;
+  }
+  .slide-show .banner-grid-style-1 {
+    padding: 20px !important;
+  }
+  .text-slider {
+    padding: 20px !important;
+  }
+}

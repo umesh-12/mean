@@ -1,0 +1,100 @@
+<div class="admin-login">
+  <div class="login">
+    <div class="login-left">
+      <div class="login-img">
+        <!-- <img src="assets/images/pets.png" alt="Login Image" width="320" /> -->
+      </div>
+      <h2 class="login-title">
+        Sukunda Metal Mart - Premium Quality Metalware & Traditional Crafts
+      </h2>
+      <p class="login-text">
+        Explore our exquisite collection of authentic brass, bronze, and copper
+        crafts. From traditional ceremonial items to modern metallic decor,
+        discover handcrafted perfection made to last a lifetime.
+      </p>
+    </div>
+    <div class="login-right">
+      <form class="login-form mx-auto col-lg-7" [formGroup]="loginForm">
+        <div class="login-logo m-b-40">
+          <img src="assets/images/logo.png" alt="" width="250px" />
+        </div>
+        <h2 class="text-center m-b-8 sign-in-title">Welcome Back</h2>
+        <p class="text-center m-b-40 login-subtitle">
+          Sign in to access your account, track your orders, and explore
+          top-tier handcrafted metalware for your home and rituals.
+        </p>
+
+        <div class="form-group mb-4">
+          <input
+            autocomplete="off"
+            type="text"
+            class="form-control"
+            id="userName"
+            placeholder="User Name"
+            formControlName="username"
+            #input1
+            (keyup)="event($event, input1, input2)"
+          />
+          <i class="fa fa-user field-icon"></i>
+        </div>
+        <div class="form-group mb-4">
+          <input
+            autocomplete="off"
+            [type]="isPasswordVisible ? 'text' : 'password'"
+            class="form-control"
+            formControlName="password"
+            id="password"
+            placeholder="Password"
+            #input2
+            (keyup)="event($event, input2, input3)"
+            #password=""
+          />
+
+          <i
+            class="fa fa-fw field-icon toggle-password"
+            [ngClass]="{
+              'fa-eye': !isPasswordVisible,
+              'fa-eye-slash': isPasswordVisible,
+            }"
+            (click)="togglePasswordVisibility()"
+            aria-hidden="true"
+          ></i>
+        </div>
+        <div class="Lflex">
+          <!-- <div class="small custom-checkbox">
+                    <input class="checkboxsize" type="checkbox" id="RememberMe">
+
+                    <small class="remember-me"> Remember me</small>
+                </div> -->
+          <div>
+            <span class="forgot-link"
+              >Forgot Password ?</span
+            >
+          </div>
+        </div>
+        <button
+          (click)="loginsubmit()"
+          type="button"
+          #input3
+          autocomplete="off"
+          value="Login"
+          class="btn btn-primary mt-4 w-100 h-40"
+          [disabled]="isLoginLoading"
+        >
+          {{ isLoginLoading ? "Processing..." : "LOGIN" }}
+        </button>
+
+        <div class="signUp mt-3 text-center">
+          <p>
+            Don’t have an account?
+            <a href="javascript:void(0)"
+              >Register</a
+            >
+          </p>
+        </div>
+
+        <!-- <button (click)="testAPI()" type="button" class="btn btn-secondary mt-4 w-100 h-40">Test API</button> -->
+      </form>
+    </div>
+  </div>
+</div>

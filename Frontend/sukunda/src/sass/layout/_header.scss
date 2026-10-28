@@ -1,0 +1,405 @@
+@use "../abstracts/variables" as vars;
+
+.header-3 {
+  background: #fff;
+}
+.header {
+  font-size: 13px;
+  &-top {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid vars.$border;
+    background: vars.$primary-500;
+    color: #fff;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  &-info {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  &-middle {
+    padding: 1rem 0;
+  }
+}
+
+.logo {
+  text-align: center;
+  display: inline-block;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.09);
+}
+
+.header__search-box {
+  select {
+    border: none;
+  }
+
+  select:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+.cart-btn {
+}
+
+.cart-btn i {
+  font-size: 14px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  background: vars.$secondary-500;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.header-info li {
+  list-style: none;
+}
+
+.notification-menu {
+  width: 320px;
+  max-width: 90vw;
+}
+
+.notification-item {
+  white-space: normal !important;
+  transition: background-color 0.2s ease;
+}
+
+.notification-item:hover {
+  background-color: #f8f9fa;
+}
+
+.unread-bg {
+  background-color: #f0f7ff;
+}
+
+.fs-xs {
+  font-size: 0.75rem;
+}
+
+.fixed-appointment-btn {
+  position: fixed;
+  bottom: 110px;
+  right: 25px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cs_header_search_custom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto; /* grow to fill the free space */
+  max-width: 520px;
+  min-width: 220px;
+  margin: 0 24px;
+  height: 44px;
+  background: #f4f5f7;
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  overflow: hidden;
+  opacity: 1;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+}
+
+.cs_header_search_custom:focus-within {
+  background: #fff;
+  border-color: vars.$primary-500;
+  // box-shadow: 0 0 0 4px rgba(242, 101, 34, 0.12);
+}
+
+.cs_search_icon {
+  position: absolute;
+  left: 16px;
+  font-size: 18px;
+  color: #888;
+  pointer-events: none;
+}
+
+.cs_search_input {
+  flex: 1;
+  height: 100%;
+  padding: 0 16px 0 44px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 14px;
+  color: #222;
+}
+
+.cs_search_input::placeholder {
+  color: #9a9a9a;
+}
+
+/* hide the browser's default clear "x" styling quirks */
+.cs_search_input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+.cs_search_btn_custom {
+  height: 100%;
+  padding: 0 22px;
+  border: 0;
+  background: vars.$primary-500;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cs_search_btn_custom:hover {
+  background: vars.$primary-400;
+}
+
+/* ================= Festival offer popup ================= */
+/* *ngIf le popup DOM ma halchha, tai transition ko thau ma animation use gareko */
+.offer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.65);
+  animation: offerFade 0.35s ease forwards;
+}
+
+@keyframes offerFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes offerPop {
+  from {
+    transform: translateY(30px) scale(0.92);
+  }
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.offer-box {
+  position: relative;
+  width: 100%;
+  max-width:600px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #b71c1c, #e53935 60%, #ff7043);
+  color: #fff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  animation: offerPop 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
+}
+
+.offer-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  color: #222;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+.offer-close:hover {
+  background: #fff;
+  transform: rotate(90deg);
+}
+
+/* Image banner (Option A) */
+.offer-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* CSS banner (Option B) */
+.offer-content {
+  padding: 40px 28px 28px;
+  text-align: center;
+}
+
+.offer-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: #ffd54f;
+  color: #7a1010;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.offer-content h2 {
+
+  margin: 16px 0 8px;
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.offer-discount {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.offer-discount strong {
+  display: inline-block;
+  padding: 2px 14px;
+  border-radius: 8px;
+  background: #fff;
+  color: #c62828;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.offer-sub {
+  margin: 10px 0 4px;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+.offer-date {
+  margin: 10px 0 20px;
+  font-size: 26px;
+  opacity: 0.85;
+}
+
+.offer-btn {
+  display: inline-block;
+  padding: 13px 40px;
+  border-radius: 999px;
+  background: #ffd54f;
+  color: #7a1010;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.offer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.offer-call {
+  margin: 16px 0 0;
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .offer-content {
+    padding: 36px 18px 22px;
+  }
+  .offer-content h2 {
+    font-size: 27px;
+  }
+}
+
+/* Tablet / mobile: search drops to its own full-width row */
+@media (max-width: 1199px) {
+  .cs_main_header_in {
+    flex-wrap: wrap;
+  }
+  .cs_header_search_custom {
+    order: 5;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 10px 0 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_search_btn_custom {
+    padding: 0 14px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .header-top {
+    height: auto;
+    line-height: 2;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+}
+
+@media only screen and (max-width: 767px) {
+  .product-catg-content {
+    margin-top: 2rem;
+  }
+  .appoint-btn {
+    height: auto;
+    line-height: 2.5;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .header-info {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  .appoint-btn-370 {
+    display: block !important;
+  }
+  .appoint-btn-sm {
+    display: none !important;
+  }
+}

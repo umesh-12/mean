@@ -1,0 +1,101 @@
+@use '../abstracts/variables' as vars;
+
+.create-account {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.create-account-checkbox {
+    height: 20px;
+    width: 20px;
+    border: 1px solid vars.$border;
+}
+
+.ship-address {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+}
+
+.ship-address-form {
+    display: none;
+}
+
+.payment-card-header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.payment-card-header-right {
+    display: flex;
+    gap: 8px;
+}
+
+.payment-card-header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    label {
+        flex: 0 0 120px;
+    }
+}
+
+.payment-card-body {
+    padding: 2rem;
+    border: 1px solid vars.$border;
+    background: #fff;
+    display: none;
+}
+
+.payment-icon {
+    position: absolute;
+    right: 20px;
+    top: 6px;
+}
+
+.paypal-icon {
+    svg {
+        width: 120px;
+        margin: 0 auto;
+    }
+}
+
+.checkout-right{
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+@media only screen and (max-width: 992px) {}
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .page-shop-checkout .shop-table th {
+        display: block;
+    }
+
+     .page-shop-checkout .shop-table tr:first-child{
+        display: none;
+     }
+
+
+    .shop-table th,
+    .shop-table tr,
+    .shop-table td {
+        display: block;
+        border: none;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+}
+
+
+@media only screen and (max-width: 576px) {}

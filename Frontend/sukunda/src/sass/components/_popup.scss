@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as vars;
+
+/* Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Container */
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 60%;
+  background: #fff;
+  z-index: 1000;
+  box-shadow:
+    0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  animation: popupFade 0.3s ease forwards;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #dcdddf;
+  background: vars.$primary-700;
+
+  h3{
+    color: #fff;
+  }
+}
+
+.popup-header .close-btn {
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Body */
+.popup-body {
+  padding: 15px;
+}
+
+/* Animation */
+/* Animation */
+@keyframes popupFade {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+
+.w-35{
+  width: 35% !important;
+}

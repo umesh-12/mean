@@ -1,0 +1,399 @@
+/* ============================================================
+   Sukunda Metal — logo sizing + color theme override
+   Loaded AFTER style_7_style.css so these win.
+   Reversible: delete this file + its <link> to restore template defaults.
+   ============================================================ */
+
+/* ---- Color Theme (extracted from sukunda logo.png) ---- */
+:root {
+  --accent-color: #d1b577; /* exact logo avg gold */
+  --accent-dark: #b0985e; /* mid gold — replaces hardcoded #b8962e */
+}
+
+/* ---- Logo Sizing ---- */
+
+/* Header main logo (desktop & tablet) */
+.cs_site_header .cs_site_branding img {
+  height: 130px;
+  width: auto;
+}
+
+/* Main header — taller so the 110px logo fits (was 100px) */
+.cs_site_header .cs_main_header_in {
+  /* height: 130px; */
+}
+
+/* Mobile nav brand (inside mobile menu) — give it a sensible size */
+.cs_site_header .cs_nav_list_wrapper .cs_site_brand img {
+  height: 56px;
+  width: auto;
+}
+
+/* Footer logo — larger and clear */
+.cs_footer_style_1 .cs_footer_logo img,
+.cs_footer_style_2 .cs_footer_logo img,
+.cs_footer_style_3 .cs_footer_logo img,
+.cs_footer_style_4 .cs_footer_logo img,
+.cs_footer_style_5 .cs_footer_logo img {
+  max-width: 120px;
+  height: auto;
+  width: auto;
+}
+
+/* Responsive: keep header logo prominent on small screens */
+@media (max-width: 767px) {
+  .cs_site_header .cs_site_branding img {
+    height: 70px;
+  }
+  .cs_site_header .cs_main_header_in {
+    height: 90px;
+  }
+}
+
+/* ---- Replace hardcoded #b8962e with mid gold (--accent-dark) ---- */
+
+/* Wrapper for the custom "Design Your Ring" offer section.
+   The inner (.cs_design_banner, .cs_promo_*) classes come from the
+   template; only the wrapper itself was custom and unstyled. */
+.cs_offer_section {
+  position: relative;
+  padding-top: 0;
+}
+.cs_offer_section .cs_design_feature_text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.4;
+}
+
+/* ---- Header action badges & search button (custom Sukunda additions) ---- */
+
+/* Containers that position the count badge */
+.cs_header_action.cs_has_badge {
+  position: relative;
+}
+
+/* The colored count pill (cart / wishlist) */
+.cs_header_action .cs_action_badge {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 50%;
+  background: var(--accent-dark, #b0985e);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile-hide utility for the search / wishlist action icons */
+.cs_header_action.mobile_hide {
+  display: inline-flex;
+}
+
+/* Search overlay input area */
+.cs_search_form input[type="search"] {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  outline: none;
+  font-size: 18px;
+  color: inherit;
+  width: 100%;
+}
+
+/* Marker classes (Sukunda custom additions used as hooks) */
+.cs_header_action.cs_search_btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: inherit;
+}
+.cs_header_action .cs_action_badge.cs_cart_count,
+.cs_header_action .cs_action_badge.cs_wishlist_count {
+  /* badge pill already styled via .cs_action_badge */
+}
+
+/* Testimonial author name */
+.cs_review_author_info .cs_review_name {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+/* Section subtitles */
+.cs_section_heading_style_1 .cs_section_subtitle,
+.cs_section_heading_styel_2 .cs_section_subtitle {
+  color: var(--accent-dark);
+}
+
+/* Hero labels */
+.cs_hero_style_1 .cs_hero_label,
+.cs_hero_style_3 .cs_hero_label,
+.cs_hero_style_5 .cs_hero_label {
+  color: var(--accent-dark);
+}
+
+/* Newsletter subtitles */
+.cs_insider_section_1 .cs_newsletter_style_1 .cs_newsletter_subtitle,
+.cs_newsletter_section_1 .cs_newsletter_style_1 .cs_newsletter_subtitle {
+  color: var(--accent-dark);
+}
+
+/* View button hover (uses #b8962e in original) */
+.cs_section_heading_style_1 .cs_view_btn:hover {
+  color: var(--accent-dark);
+}
+
+/* ---- Shop page: view-toggle buttons ----
+   A generic `!important` .cs_view_btn rule (grouped with the hero/promo
+   button overrides above) turns the shop's six compact layout icons into
+   large bordered pill buttons. These scoped rules restore the intended
+   narrow icon-only buttons ONLY inside the shop toolbar's .cs_view_toggle. */
+.cs_shop_toolbar .cs_view_toggle .cs_view_btn {
+  width: 34px;
+  height: 34px;
+  padding: 0 !important;
+  border: 1px solid var(--accent-color) !important;
+  border-radius: 4px;
+  background-color: transparent !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.cs_shop_toolbar .cs_view_toggle .cs_view_btn img {
+  width: 14px;
+  height: 14px;
+}
+.cs_shop_toolbar .cs_view_toggle .cs_view_btn:hover,
+.cs_shop_toolbar .cs_view_toggle .cs_view_btn.active {
+  background-color: var(--accent-color) !important;
+}
+.cs_shop_toolbar .cs_view_toggle .cs_view_btn:hover img,
+.cs_shop_toolbar .cs_view_toggle .cs_view_btn.active img {
+  filter: brightness(0) invert(1);
+}
+
+/* ---- Shop page: sort dropdown ----
+   The template's nice-select JS plugin is not bundled, so the sort
+   <select class="nice_select"> renders as a tiny native dropdown. These
+   rules restore a styled, comfortable sort control (rounded, gold-bordered,
+   custom arrow) matching the template's intended look — purely CSS, no JS. */
+.cs_shop_toolbar .cs_shop_sort .nice_select {
+  height: 44px;
+  padding: 0 38px 0 18px;
+  font-size: 14px;
+  font-family: var(--secondary-font, Inter, sans-serif);
+  color: var(--primary-color, #2c2c2c);
+  background-color: #fff;
+  border: 1px solid var(--gray3-color, #e7e7e7);
+  border-radius: 6px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%232c2c2c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px;
+  cursor: pointer;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.cs_shop_toolbar .cs_shop_sort .nice_select:hover,
+.cs_shop_toolbar .cs_shop_sort .nice_select:focus {
+  border-color: var(--accent-color, #d1b577);
+  box-shadow: 0 0 0 3px rgba(209, 181, 119, 0.15);
+}
+
+/* ---- Global font consistency ----
+   The SCSS global layer sets headings to "Nunito Sans" (imported from
+   Google Fonts), while the template layer ships self-hosted Playfair
+   Display + Inter via --primary-font / --secondary-font. To keep one
+   coherent, on-brand type system (elegant jewelry look), headings use
+   Playfair Display and body/text uses Inter — the theme's own fonts.
+   Reversible: remove this block to restore Nunito Sans headings. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.cs_header_title,
+.cs_primary_font,
+.cs_filter_title,
+.cs_product_title,
+.cs_promo_title,
+.cs_section_title,
+.cs_card_title,
+.cs_footer_widget_title,
+.cs_pagination_item {
+  font-family: var(--primary-font, "Playfair Display", serif);
+}
+
+body,
+p,
+div,
+span,
+a,
+li,
+td,
+th,
+.cs_secondary_font,
+.cs_shop_result,
+.cs_product_specs,
+.cs_filter_list,
+.cs_checkbox_label,
+.cs_product_stock,
+.cs_product_tag,
+.cs_rating,
+.cs_shop_toolbar,
+.cs_nice_select,
+.cs_btn_style_1 .cs_white_color {
+  font-family: var(--secondary-font, "Inter", sans-serif);
+}
+
+/* ---- Shop promo banner: reduce + equalize height ----
+   The template's .cs_product_promo_1 uses min-height:350px + align-items:
+   flex-end, so the two cards size to their content (409px vs 350px). Give
+   both a fixed, shorter height for a clean, matched pair. */
+.cs_promo_banner .cs_product_promo_1 {
+  height: 280px;
+  padding: 16px 40px;
+}
+.cs_promo_banner .cs_product_promo_1 .cs_promo_content {
+  width: min(100%, 260px);
+}
+/* Keep longer promo titles from wrapping to 3 lines and getting clipped. */
+.cs_promo_banner .cs_product_promo_1 .cs_promo_title {
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+/* ---- Shop promo banner: kill excessive padding above/below ----
+   The promo wrapper uses .cs_section_padding (64px top+bottom), and the
+   shop grid below has its own .cs_section_padding, so the promo sits in a
+   128px+ gap. Reduce this wrapper to a small top pad and no bottom pad
+   (the shop section's own top padding provides the spacing). */
+.cs_promo_banner_section {
+  padding: 24px 0 0 !important;
+}
+/* The .cs_promo_banner row carries a default 40px margin-bottom; drop it so
+   the only spacing below the banner is the shop section's own padding. */
+.cs_promo_banner_section .cs_promo_banner {
+  margin-bottom: 0 !important;
+}
+
+/* ---- Shop product grid: uniform image heights ----
+   Product thumbs currently size to each image's natural height, so cards
+   aren't equal (246–265px). Force a fixed thumb height + cover so every
+   thumbnail is exactly the same height across all view modes. A fixed
+   height (not aspect-ratio alone) is robust against inline-image baseline
+   gaps that still made one card taller. */
+.cs_shop_layout[data-view="list"] .cs_product_thumb,
+.cs_shop_layout[data-view="2"] .cs_product_thumb,
+.cs_shop_layout[data-view="3"] .cs_product_thumb,
+.cs_shop_layout[data-view="4"] .cs_product_thumb,
+.cs_shop_layout[data-view="5"] .cs_product_thumb,
+.cs_shop_layout[data-view="6"] .cs_product_thumb {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 5;
+  max-height: none;
+  min-height: 0;
+  align-self: auto;
+}
+.cs_shop_layout .cs_product_thumb .cs_product_img {
+  object-fit: cover;
+  width: 100%;
+  height: 330px;
+  transform: scale(1);
+  display: block;
+  line-height: 0;
+}
+
+.cs_shop_layout[data-view="3"] .cs_product_thumb .cs_product_img {
+  height: 450px;
+}
+.cs_shop_layout[data-view="list"] .cs_product_thumb .cs_product_img {
+  height: 225px;
+}
+
+/* ============================================================
+   Footer — 5-column grid (was 4, Contact Us was wrapping)
+   ============================================================ */
+.cs_footer_style_3 .cs_footer_grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* ============================================================
+   Home offers CTA — was width:100%, now inline
+   ============================================================ */
+.cs_design_banner .cs_promo_btn {
+  width: auto;
+  display: inline-block;
+}
+
+/* ============================================================
+   Footer — payment icons: center within their container
+   ============================================================ */
+.cs_footer_style_3 .cs_footer_payments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+.cs_footer_style_3 .cs_footer_payments img {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+/* ============================================================
+   Back-to-top button (on every page via footer component)
+   ============================================================ */
+.cs_back_to_top {
+  position: fixed;
+  right: 24px;
+  bottom: 130px;
+  z-index: 9000;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent-dark, #b0985e);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+.cs_back_to_top:hover {
+  transform: translateY(-3px);
+  background: var(--accent-color, #d1b577);
+}
+
+/* ============================================================
+   AI chat launcher — raised above other fixed widgets
+   ============================================================ */
+.chat-launcher {
+  bottom: 40px !important;
+}

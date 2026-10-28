@@ -1,0 +1,188 @@
+@use "../abstracts/variables" as vars;
+
+/* #Reset & Basics================================================== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+app-layout html {
+  font-family: sans-serif;
+  line-height: vars.$line-height-base;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+app-layout body {
+  margin: 0;
+  font-family: vars.$font-family-base;
+  font-size: vars.$font-size-base;
+  font-weight: vars.$font-weight-base;
+  line-height: vars.$line-height-base;
+  color: vars.$body-color;
+  text-align: left;
+  background-color: vars.$body-bg;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+// html {
+//   font-size: 14px;
+// }
+
+app-layout strong {
+  color: #1a1d1f;
+}
+
+app-layout label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+app-layout input,
+app-layout select {
+  color: vars.$body-color;
+}
+
+.table > :not(caption) > * > * {
+  color: #222;
+}
+
+.text-primary {
+  color: vars.$text-primary !important;
+}
+
+.text-secondary {
+  color: vars.$text-secondary !important;
+}
+
+.text-underline {
+  text-decoration: underline !important;
+}
+
+.box-sahadow-none {
+  box-shadow: none !important;
+}
+
+/* #Typography================================================== */
+app-layout h1,
+app-layout h2,
+app-layout h3,
+app-layout h4,
+app-layout h5,
+app-layout h6,
+app-layout .h1,
+app-layout .h2,
+app-layout .h3,
+app-layout .h4,
+app-layout .h5,
+app-layout .h6 {
+  margin-top: 0;
+  margin-bottom: vars.$headings-margin-bottom;
+  font-weight: vars.$headings-font-weight;
+  line-height: vars.$headings-line-height;
+  font-family: vars.$headings-font-family-1;
+  color: vars.$headings-color;
+  //letter-spacing: -0.5px;
+}
+
+app-layout h1,
+app-layout .h1 {
+  font-size: vars.$h1-font-size;
+
+  @media screen and (max-width: 767px) {
+    font-size: 1.625rem;
+  }
+}
+
+app-layout h3,
+app-layout .h3 {
+  font-size: vars.$h3-font-size;
+}
+
+app-layout h4,
+app-layout .h4 {
+  font-size: vars.$h4-font-size;
+}
+
+app-layout p {
+  margin-top: 0;
+  margin-bottom: vars.$paragraph-margin-bottom;
+}
+
+app-layout img {
+  vertical-align: middle;
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+}
+
+app-layout svg {
+  display: block;
+}
+
+/* Links */
+app-layout a {
+  color: vars.$link-color;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+
+/* #Lists================================================== */
+app-layout ul,
+app-layout ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+::focus,
+input:focus {
+  outline: 0;
+}
+
+.Gap-5 {
+  gap: 5px;
+}
+
+.Gap-10 {
+  gap: 10px;
+}
+
+.h-40 {
+  height: 40px;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+//shadow
+.shadow-1 {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.09);
+}
+
+.relative {
+  position: relative;
+}
+
+input:focus {
+  border-color: vars.$secondary-500;
+}
+
+.admin .btn-sm{
+  height: 32px;
+  line-height: 32px;
+}

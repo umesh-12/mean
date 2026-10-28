@@ -1,0 +1,85 @@
+
+<main>
+  <!-- Start Page Header -->
+  <section
+    class="cs_page_header_style_1 cs_bg_filed cs_section_padding"
+    style="
+      background-image: url(&quot;assets/images/img_data_77_page_header_bg.jpg&quot;);
+    "
+  >
+    <div class="container">
+      <h1 class="cs_header_title cs_fs_48 cs_bold">My Account</h1>
+      <nav class="cs_breadcrumb" aria-label="Breadcrumb">
+        <a routerLink="/">Home</a>
+        <span class="cs_breadcrumb_sep">/</span>
+        <span class="cs_breadcrumb_current">My Account</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="cs_account_section cs_section_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="cs_account_thumb">
+            <img style="height: 455px;"
+              src="assets/images/hero-banner.png"
+              alt="Sukunda Metal Mart member"
+            />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="customer-login cs_login_box">
+            <div class="cs_login_head">
+              <h2 class="cs_login_title cs_fs_36 cs_semibold">Login</h2>
+              <p class="cs_login_subtitle cs_fs_14 mb-0">
+                Sign in to continue your jewelry journey
+              </p>
+            </div>
+            <form #Form="ngForm">
+              <div class="mb-3">
+                <label for="">Username or Email address *</label>
+                <input
+                  type="text"
+                  class="form-control-main"
+                  name="userName"
+                  [(ngModel)]="service.loginModel.username"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="">Password *</label>
+                <input
+                  type="password"
+                  class="form-control-main"
+                  name="password"
+                  [(ngModel)]="service.loginModel.password"
+                  required
+                />
+              </div>
+              <div class="Lflex">
+                <div>
+                  <span class="forgot-link" (click)="openPopup()"
+                    >Forgot Password ?</span
+                  >
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="cs_btn_style_1 cs_primary_bg cs_white_color m-t-8"
+                (click)="loginSubmit()"
+              >
+                Login
+              </button>
+              <p class="m-t-12 text-center">
+                Don't have an account?
+                <a routerLink="/register" class="btnLink">Create an account</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

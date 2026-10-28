@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as vars;
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.tag {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 1px solid #198c3a;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  color: #198c3a;
+}
+
+.benefit-content h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.benefit-content ul li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.benefit-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #198c3a;
+}
+
+@media (max-width: 768px) {
+  .benefit {
+    position: static;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .benefit-content h2 {
+    font-size: 32px;
+  }
+}
